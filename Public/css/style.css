@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin+Sketch&family=Indie+Flower&display=swap');
+
+h1{
+  font-size: 1.1rem;
+    color: #DADDB1;
+
+}
+/* Estilos comunes */
+*{
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  a{
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  
+  .nav-list li {
+    margin: 0 ;
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+  }
+  .nav-list a:hover{
+    color: #D6C7AE;
+  }
+  
+  #destacados,
+  #secciones {
+    margin: 20px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+
+  /** inicio */
+
+  .principal{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+  }
+  .containerStart{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin-top: 1rem;
+  }
+  .containerStart article{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  aside img{
+    width: 100%;
+
+  }
+  
+  
+  /** estilos formulario */
+  
+  form {
+    background-color: #B3A492;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #BFB29E;
+    color: #1E1E1E;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #D6C7AE;
+  }
+  
+  /** catalogo */
+.grid-container{
+  display: grid;
+  width: 100%;
+  grid-template-columns: 500px 400px 1fr;
+  grid-template-rows: 300px 500px 300px;
+  grid-template-areas: 
+  "uno dos dos"
+  "uno tres tres"
+  " cuatro cuatro cuatro"
+  ;
+}
+.grid-container  img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.image-1{
+grid-area: uno;
+}
+
+.image-2{
+grid-area: dos;
+}
+
+.image-3{
+grid-area: tres;
+}
+
+.image-4{
+grid-area: cuatro;
+}
+
+
+
+  /* Estilos para dispositivos móviles */
+  @media screen and (max-width: 768px) {
+    .nav-list {
+      flex-direction: column;
+      align-items: center;
+     
+    }
+  
+    .nav-list li {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 900px){
+    .grid-container{
+      grid-template-columns: 1fr ;
+      grid-template-rows: 1fr ;
+      grid-template-areas: 
+      "uno"
+      "dos"
+      "tres"
+      "cuatro"
+      ;
+    }
+  }
+  
